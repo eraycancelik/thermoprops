@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: thermoprops_frontend
+    ports:
+      - "80:80"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: thermoprops_backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - FLASK_ENV=development
+
+networks:
+  mynetwork:
+    driver: bridge
+
+#version: '3.8'
+#
+#services:
+#  frontend:
+#    build:
+#      context: ./frontend
+#      dockerfile: Dockerfile
+#    container_name: thermoprops_frontend
+#    ports:
+#      - "3000:3000"
+#    command: npm run dev
+#
+#  backend:
+#    build:
+#      context: ./backend
+#      dockerfile: Dockerfile
+#    container_name: thermoprops_backend
+#    ports:
+#      - "5000:5000"
+#    volumes:
+#      - ./backend:/app
+#    environment:
+#      - FLASK_ENV=development
+#    command: flask run --host=0.0.0.0 --port=5000 --reload
+#
+#networks:
+#  mynetwork:
+#    driver: bridge
+
+
+
