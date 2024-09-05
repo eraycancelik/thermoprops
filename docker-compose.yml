@@ -12,8 +12,9 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
     volumes:
-            - "./frontend:/usr/src/app"  # Yalnızca gerekli dizini bağlayın
-            - /usr/src/app/node_modules  
+            - ./frontend:/usr/src/app  # Yalnızca gerekli dizini bağlayın
+            - /usr/src/app/node_modules
+            - ./frontend/node_modules:/usr/src/app/node_modules
     
   backend:
     build:

@@ -1,10 +1,13 @@
-from flask import Flask
+from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
 
+CORS(app, resources={r"/*": {"origins": ["http://127.0.0.1:5173", "http://localhost:5173", "http://172.21.0.1:5173"]}})
+
+
+
 @app.route('/')
 def hello_world():
-    return 'Selamun aleyküm, dünya!,naber len'
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    message = "Selamun aleyküm, dünya!,naber len"
+    return jsonify(message=message)
