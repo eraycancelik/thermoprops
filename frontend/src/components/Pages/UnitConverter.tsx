@@ -1,8 +1,8 @@
 
-export const Contact = () => {
+export const UnitConverter = () => {
     return (
         <div>
-            <h1>About</h1>
+            <h1>Unit Converter</h1>
             <p>
                 This is a simple web application that uses a Python Flask backend to serve a React frontend.
             </p>
@@ -15,4 +15,4 @@ export const Contact = () => {
         </div>
     );
 }
-export default Contact;
+export default UnitConverter;
