@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -10,6 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
   color: black;
   --main-width: 960px;
+  --header-font:"Barlow Condensed", sans-serif;
   
 }
 
