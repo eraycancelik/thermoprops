@@ -2,13 +2,13 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import List from './components/List/List'
 import Navbar from './components/Navbar/Navbar'
-import Rest from './components/Rest/Rest'
 import { About, Contact, Home } from "./components/Pages"
-
+import Icon from './components/Navbar/Icon'
 const App = () => {
 
   return (
     <div className='bigwall'>
+      <Icon />
       <Navbar />
       <div className='wall'>
         <Routes>

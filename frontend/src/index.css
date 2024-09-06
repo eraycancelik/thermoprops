@@ -3,14 +3,17 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  background-color: #313131;
+  background-color: #fff5f5;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  color: black;
 
 
 
   --main-width: 960px;
+}
+html {
+  overflow-y:scroll;
 }
