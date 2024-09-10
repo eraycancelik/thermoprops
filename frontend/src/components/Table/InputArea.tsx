@@ -1,25 +1,21 @@
 import "./InputArea.css"
 const InputArea = () => {
     return (
-        <div className='inputArea'>
+        <div className='inputContainer'>
             <h3>Point properties</h3>
-            <div className='inputMiniArea'>
-                <div className="mateArea">
+            <div className='inputArea'>
                     <label>temperature T (°C)</label>
-                    <label>Pressure (bar)</label>
-                    <label>enthalpy h (kJ/kg)</label>
-                    <label>internal energy</label>
-                    <label>specific volume</label>
-                </div>
-                <div className="mateArea">
                     <input type="number" placeholder="Enter temperature" />
+                    <label>Pressure (bar)</label>
                     <input type="number" placeholder="Enter pressure" />
+                    <label>enthalpy h (kJ/kg)</label>
                     <input type="number" placeholder="Enter enthalpy" />
+                    <label>internal energy</label>
                     <input type="number" placeholder="Enter internal energy" />
+                    <label>specific volume</label>
                     <input type="number" placeholder="Enter specific volume" />
                 </div>
             </div>
-        </div>
     )
 }
 

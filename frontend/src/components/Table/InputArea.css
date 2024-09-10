@@ -1,33 +1,35 @@
-.inputArea {
+.inputContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px;
+    width: 70%;
 }
-
-.mateArea {
-    display: flex;
-    flex-direction: column;
+.inputArea{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: start;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 10px;
+    
+}
+.inputArea hr{
+    width: 50%;
+    border-width: 1px;
 }
 
-.inputMiniArea {
-    display: flex;
-    flex-direction: row;
-    align-items: space-between;
-    justify-content: space-around;
-    gap: 10px;
+.inputArea label{
+    font-size: 15px;
+    width: 100%;
 
 }
 
-input {
-    width: 80%;
-    height: 16px;
-    background-color: aliceblue;
-    border: 1px solid black;
-    border-radius: 1px;
+.inputArea input{
+    width: 90%;
+    margin: 5px;
+    background-color: #ffffff;
+    height: 15px;
+    border-width: 1px;
     color: black;
+    
 }
