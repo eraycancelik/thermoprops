@@ -1,9 +1,7 @@
-.calculator-container{
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-h1{
-    font-family: var(--header-font);
+    margin-top: 50px;
 }

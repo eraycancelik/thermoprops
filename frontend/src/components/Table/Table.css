@@ -1,0 +1,10 @@
+.mainTable{
+    border-radius: 10px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    width: 70%;
+}
+hr{
+    width: 90%; 
+    border: 1px solid black;
+}

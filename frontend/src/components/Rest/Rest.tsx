@@ -9,12 +9,12 @@ import {
     TableCaption,
     TableContainer,
 } from '@chakra-ui/react'
-
+import "./Rest.css"
 const Rest = () => {
 
     return (
-        <div>
-            <TableContainer margin={"200px"}>
+        <div className='container'>
+            <TableContainer>
                 <Table variant='striped' colorScheme='teal'>
                     <TableCaption>Imperial to metric conversion factors</TableCaption>
                     <Thead>
@@ -50,8 +50,8 @@ const Rest = () => {
                     </Tfoot>
                 </Table>
             </TableContainer>
-
-            <TableContainer marginLeft={"200px"}>
+            <br />
+            <TableContainer >
                 <Table size='sm'>
                     <Thead>
                         <Tr>
