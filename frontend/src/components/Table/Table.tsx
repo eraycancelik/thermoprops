@@ -8,7 +8,7 @@ const Table = () => {
         <div className="mainTable">
             <SelectionArea />
             <hr/>
-            <InputArea />
+            <InputArea /> 
             <hr />
             <TableButtons/>
         </div>
