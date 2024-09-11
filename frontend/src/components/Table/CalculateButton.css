@@ -1,0 +1,20 @@
+.calculateButton button{
+  padding:12px;
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: white;
+  border: 2px solid darkolivegreen;
+  color: darkolivegreen;
+  cursor: pointer;
+  min-width: 100px;
+}
+.calculateButton button:hover{
+  background-color: darkolivegreen;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  color: white;
+  padding:10px;
+}
+.calculateButton button:active{
+  background-color: darkolivegreen;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}

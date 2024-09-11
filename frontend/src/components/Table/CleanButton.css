@@ -1,0 +1,20 @@
+.cleanButton button{
+  padding:12px;
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: white;
+  border: 2px solid rgb(47, 100, 107);
+  color: #3d3d3d;
+  cursor: pointer;
+  min-width: 100px;
+}
+.cleanButton button:hover{
+  background-color: rgb(47, 100, 107);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  color: white;
+  padding:10px;
+}
+.cleanButton button:active{
+  background-color: rgb(47, 100, 107);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}

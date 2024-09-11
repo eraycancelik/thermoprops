@@ -2,7 +2,7 @@ import React from 'react'
 import './Table.css'
 import InputArea from './InputArea'
 import SelectionArea from './SelectionArea'
-import Calculate from './Calculate'
+import TableButtons from './TableButtons'
 const Table = () => {
     return (
         <div className="mainTable">
@@ -10,7 +10,7 @@ const Table = () => {
             <hr/>
             <InputArea />
             <hr />
-            <Calculate/>
+            <TableButtons/>
         </div>
     )
 }
