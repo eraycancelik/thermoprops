@@ -1,5 +1,4 @@
 import "./UnitConverter.css"
-import Rest from "../Rest/Rest";
 export const UnitConverter = () => {
     return (
         <div >
@@ -7,7 +6,6 @@ export const UnitConverter = () => {
             <p>
                 This is a simple web application that uses a Python Flask backend to serve a React frontend.
             </p>
-            <Rest/>
             <br />
             <p className="textField">
                 The frontend is a single page application that uses React Router to navigate between different pages.

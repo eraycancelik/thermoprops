@@ -15,22 +15,40 @@ services:
             - ./frontend:/usr/src/app  # Yalnızca gerekli dizini bağlayın
             - /usr/src/app/node_modules
             - ./frontend/node_modules:/usr/src/app/node_modules
-    
-  backend:
-    build:
+    # prod docker-compose dosyasında build kısmı bulunmaz çünkü build işlemi değil image'ın alınması söz konusudur.
+  api:
+    build: 
       context: ./api
       dockerfile: Dockerfile
     container_name: thermoprops_api
+    depends_on:
+      - postgres
     ports:
-      - "5000:5000"
+      - 8000:8000
     volumes:
-      - ./api:/app
+      - ./:/usr/src/app:ro
+      # hotreload yapabilmek için volumes kısmında appi belirmetmemiz ve command kısmında uvicornu --reload ile başlatmamız gerekir.
+      # "ro" tag'ı ReadOnly kısaltmasıdır ve container'ın sadece yapılan değişikleri uygulamasını
+      # belirtir (container içerisinden app'te değişik yapılmayacağı ve containerın sadece okuma yapacağı bildirilir.)
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+    # - <port on localhost>:<port on container>
+    # env_file:
+    #   - ./.env
     environment:
-      - FLASK_ENV=development
-
-networks:
-  mynetwork:
-    driver: bridge
+      - DATABASE_HOSTNAME=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_PASSWORD=159632159
+      - DATABASE_NAME=thermoprops_db
+      - DATABASE_USERNAME=postgres
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=159632159
+      - POSTGRES_DB=thermoprops_db
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+volumes:
+  postgres-db:
 
 
 #version: '3.8'

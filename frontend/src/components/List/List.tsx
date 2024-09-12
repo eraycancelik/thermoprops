@@ -10,7 +10,7 @@ const List = () => {
   const [error, setError] = useState<string | null>(null);  // Hata durumunu saklamak için state
 
   useEffect(() => {
-    axios.get<Response>('http://localhost:5000')
+    axios.get<Response>('http://localhost:8000')
       .then(response => {
         setMessage(response.data.message);  // Gelen veriyi state'e kaydet
         setError(null);  // Hata varsa temizle
