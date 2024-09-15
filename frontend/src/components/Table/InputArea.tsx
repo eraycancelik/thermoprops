@@ -5,15 +5,15 @@ const InputArea = () => {
             <h3>Point properties</h3>
             <div className='inputArea'>
                     <label>temperature T (°C)</label>
-                    <input type="number" placeholder="Enter temperature" />
+                    <label className="resultLabel">-</label>
                     <label>Pressure (bar)</label>
-                    <input type="number" placeholder="Enter pressure" />
+                    <label className="resultLabel">-</label>
                     <label>enthalpy h (kJ/kg)</label>
-                    <input type="number" placeholder="Enter enthalpy" />
+                    <label className="resultLabel">-</label>
                     <label>internal energy</label>
-                    <input type="number" placeholder="Enter internal energy" />
+                    <label className="resultLabel">-</label>
                     <label>specific volume</label>
-                    <input type="number" placeholder="Enter specific volume" />
+                    <label className="resultLabel">-</label>
                 </div>
             </div>
     )

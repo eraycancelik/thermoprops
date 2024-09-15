@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from .config import settings
 # Format of sqlalchemy database url:
 # "postgresql://<user_name>:<password>@<ip_address/hostname>:<database>"
-SQLALCHEMY_DATABASE_URL = f"postgresql://postgres:159632159@postgres:5432/thermoprops_db"
+SQLALCHEMY_DATABASE_URL = f"postgresql://postgres:dev-password@postgres:5432/thermoprops_db"
 
 # Create a database engine
 # engine is used to connect to the database

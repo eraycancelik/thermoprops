@@ -23,13 +23,9 @@
     width: 100%;
 
 }
-
-.inputArea input{
-    width: 90%;
-    margin: 5px;
-    background-color: #ffffff;
-    height: 15px;
-    border-width: 1px;
-    color: black;
-    
+.resultLabel{
+    font-size: 15px;
+    width: 100%;
+    color: #141935;
+    margin-left: 20px;
 }
