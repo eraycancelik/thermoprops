@@ -37,46 +37,15 @@ services:
     environment:
       - DATABASE_HOSTNAME=postgres
       - DATABASE_PORT=5432
-      - DATABASE_PASSWORD=dev-password
+      - DATABASE_PASSWORD=devPostgresPassword
       - DATABASE_NAME=thermoprops_db
       - DATABASE_USERNAME=postgres
   postgres:
     image: postgres
     environment:
-      - POSTGRES_PASSWORD=dev-password
+      - POSTGRES_PASSWORD=devPostgresPassword
       - POSTGRES_DB=thermoprops_db
     volumes:
       - postgres-db:/var/lib/postgresql/data
 volumes:
   postgres-db:
-
-
-#version: '3.8'
-#
-#services:
-#  frontend:
-#    build:
-#      context: ./frontend
-#      dockerfile: Dockerfile
-#    container_name: thermoprops_frontend
-#    ports:
-#      - "80:80"
-#    volumes:
-#            - .:/app
-#            - /app/node_modules
-#    
-#  backend:
-#    build:
-#      context: ./backend
-#      dockerfile: Dockerfile
-#    container_name: thermoprops_backend
-#    ports:
-#      - "5000:5000"
-#    volumes:
-#      - ./backend:/app
-#    environment:
-#      - FLASK_ENV=development
-#
-#networks:
-#  mynetwork:
-#    driver: bridge
