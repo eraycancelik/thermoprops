@@ -27,7 +27,7 @@ services:
       - 8000:8000
     volumes:
       - ./:/usr/src/app:ro
-      # hotreload yapabilmek için volumes kısmında appi belirmetmemiz ve command kısmında uvicornu --reload ile başlatmamız gerekir.
+      # hotreload yapabilmek için volumes kaısmında appi belirmetmemiz ve command kısmında uvicornu --reload ile başlatmamız gerekir.
       # "ro" tag'ı ReadOnly kısaltmasıdır ve container'ın sadece yapılan değişikleri uygulamasını
       # belirtir (container içerisinden app'te değişik yapılmayacağı ve containerın sadece okuma yapacağı bildirilir.)
     command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
