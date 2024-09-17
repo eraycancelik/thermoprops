@@ -9,10 +9,12 @@
 
 .specContainer {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr 2.5fr;
     text-align: start;
     align-items: center;
-    width: 85%;
+}
+.specContainer input{
+    font-size: 13px;
 }
 .specContainer > div {
     height: 30px;
@@ -53,7 +55,9 @@
     outline: none;
 }
 
-
+.fluidInput.active {
+    background-color: rgba(223, 223, 223, 0.062);
+  }
 /*----------------------------------------------  select option ----------------------------------------------------*/
 
 *,
@@ -63,6 +67,9 @@
 }
 
 select {
+    /*box-shadow: rgba(15, 11, 49, 0.4) 5px 5px, rgba(15, 11, 49, 0.3) 10px 10px, rgba(15, 11, 49, 0.2) 15px 15px, rgba(15, 11, 49, 0.1) 20px 20px, rgba(15, 11, 49, 0.05) 25px 25px;*/
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding:0rem 0.5rem;
     align-items: center;
     justify-content: center;
     appearance: none;
@@ -75,7 +82,6 @@ select {
     cursor: inherit;
     line-height: inherit;
     width: 100%;
-    padding: 0rem 0.7rem;
 }
 
 select::-ms-expand {
@@ -92,6 +98,7 @@ select {
 }
 
 .checkbox-wrapper-18 .round label {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 50%;

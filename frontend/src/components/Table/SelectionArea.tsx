@@ -1,5 +1,22 @@
 import './SelectionArea.css'
+import { useState } from 'react'
+
 const SelectionArea = () => {
+    const [isChecked, setIsChecked] = useState(true)
+    const [inputDisabled, setInputDisabled] = useState(true)
+    const [inputValue, setInputValue] = useState('');
+    const inputHandleChange = (event:any) => {
+        setInputValue(event.target.value);
+      };
+    const handleChange = () => {
+        setIsChecked(!isChecked)
+        setInputDisabled(!inputDisabled)
+        if (isChecked==false){
+            setInputValue('');
+        }
+        console.log(isChecked)
+        console.log(inputDisabled)
+    }
     return (
         <div className='selectionContainer'>
             <h3>Selection of fluid and calculation mode</h3>
@@ -46,11 +63,11 @@ const SelectionArea = () => {
                 </div>
                 <div className='quality'>
                     <label htmlFor="calculationMode">Fluid quality</label>
-                    <div className="checkbox-wrapper-18"><div className="round"><input type="checkbox" id="checkbox-18" /><label htmlFor="checkbox-18"></label></div></div>
+                    <div className="checkbox-wrapper-18"><div className="round"><input onChange={handleChange} type="checkbox" id="checkbox-18" /><label htmlFor="checkbox-18"></label></div></div>
                 </div>
                 <div className='arrowedInput'>
                     <p>&#10230;</p>
-                    <input className='fluidInput' type="number" />
+                    <input className={`fluidInput ${isChecked ? "active" : ""}`} placeholder="must be between 0 and 1" value={inputValue} onChange={inputHandleChange} type="number" disabled={inputDisabled} />
                 </div>
             </div>
         </div>
