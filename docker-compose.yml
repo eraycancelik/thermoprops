@@ -1,21 +1,6 @@
 version: '3.8'
 
 services:
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: thermoprops_frontend
-    stdin_open: true
-    ports:
-      - "80:5173"
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    volumes:
-            - ./frontend:/usr/src/app  # Yalnızca gerekli dizini bağlayın
-            - /usr/src/app/node_modules
-            - ./frontend/node_modules:/usr/src/app/node_modules
-    # prod docker-compose dosyasında build kısmı bulunmaz çünkü build işlemi değil image'ın alınması söz konusudur.
   api:
     build: 
       context: ./api
@@ -40,6 +25,8 @@ services:
       - DATABASE_PASSWORD=devPostgresPassword
       - DATABASE_NAME=thermoprops_db
       - DATABASE_USERNAME=postgres
+
+
   postgres:
     image: postgres
     environment:
@@ -47,5 +34,11 @@ services:
       - POSTGRES_DB=thermoprops_db
     volumes:
       - postgres-db:/var/lib/postgresql/data
+  
+      
+networks:
+  postgres:
+    driver: bridge
+
 volumes:
   postgres-db:
