@@ -1,5 +1,5 @@
-import logo from "../../assets/thermoprops.png";
 import "./Icon.css";
+const logo = require('../../assets/thermoprops.png');
 export const Icon = () => {
     return (
         <div className="iconwrapper">
