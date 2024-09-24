@@ -13,3 +13,7 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"response": "naber"}
+
+@app.get("/route1")
+async def route1():
+    return {"response": "yeni bir route"}
